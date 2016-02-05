@@ -20,9 +20,9 @@
 # FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
 # DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
 # SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-# CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+# CAUsed AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 # OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# OF THIS SOFTWARE, EVEN IF ADVIsed OF THE POSSIBILITY OF SUCH DAMAGE.
 ####
 
 _prettytable_top_left="┌"
@@ -38,7 +38,7 @@ _prettytable_vertical_horizontal_bottom="┴"
 _prettytable_vertical_horizontal="┼"
 
 function _prettytable_prettify_lines() {
-    cat - | sed -e "s@^@${_prettytable_vertical}@;s@\$@\t@;s@\t@\t${_prettytable_vertical}@g"
+    cat - | sed -e "s@^@${_prettytable_vertical}@;s@\$@	@;s@	@	${_prettytable_vertical}@g"
 }
 
 function _prettytable_fix_border_lines() {
