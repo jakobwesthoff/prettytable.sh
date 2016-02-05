@@ -18,6 +18,25 @@ Multiline table data is simply piped into `prettytable` for formating, while
 the number of columns needs to be specified. Columns need to be delimited using
 a `\t` (Tab) character.
 
+Optionally a color may be specified as second argument to `prettytable`. This
+color will be used to to color the header text. Available colors:
+
+- blue
+- green
+- cyan
+- red
+- purple
+- yellow
+- gray
+- light_blue
+- light_green
+- light_cyan
+- light_red
+- light_purple
+- light_yellow
+- light_gray
+
+
 ## Example
 
 ```bash
