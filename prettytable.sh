@@ -113,6 +113,6 @@ function prettytable() {
 
 case $- in
   *i*) ;; # assume being sourced, do nothing
-  *) prettytable ;; # assume being executed as an executable
+  *) prettytable $* ;; # assume being executed as an executable
 esac
 
