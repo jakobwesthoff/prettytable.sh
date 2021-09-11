@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ####
-# Copyright (c) 2016, 
+# Copyright (c) 2016-2021 
 #   Jakob Westhoff <jakob@westhoffswelt.de>
 # 
 # Redistribution and use in source and binary forms, with or without
