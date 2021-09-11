@@ -111,8 +111,7 @@ function prettytable() {
     } | column -t -s $'\t' | _prettytable_fix_border_lines | _prettytable_colorize_lines "${color}" "2"
 }
 
-case $- in
-  *i*) ;; # assume being sourced, do nothing
-  *) prettytable $* ;; # assume being executed as an executable
-esac
-
+if [ "$0" = "$BASH_SOURCE" ]; then
+    # Execute function if called as a script instead of being sourced.
+    prettytable $*
+fi
