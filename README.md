@@ -9,10 +9,19 @@ The `column` utillity as well as `sed` are needed for this script to work.
 
 The implementation has been tested using *bash* as well as *zsh*.
 
+## Installation
+
+Options
+
+* Copy and paste the code in your script
+* Download it and chmod +x the script then save it somewhere on your PATH and source it
+* If you have [basher](https://github.com/basherpm/basher) then `basher install jakobwesthoff/prettytable.sh`
+
 ## Usage
 
 You may either source the `prettytable.sh` file or use it as an executable.
 Both works just fine.
+See [Installation](#installation) for install options.
 
 Multiline table data is simply piped into `prettytable` for formating, while
 the number of columns needs to be specified. Columns need to be delimited using
