@@ -57,12 +57,12 @@ color will be used to to color the header text. Available colors:
 ```
 
 ```
-┌──────────┬──────────────────────────┬─────────────────────────┐
-│PID       │USER                      │APPNAME                  │
-├──────────┼──────────────────────────┼─────────────────────────┤
-│1         │john                      │foo bar                  │
-│12345678  │someone_with_a_long_name  │blub blib blab bam boom  │
-└──────────┴──────────────────────────┴─────────────────────────┘
+┌────────┬────────────────────────┬───────────────────────┐
+│PID     │USER                    │APPNAME                │
+├────────┼────────────────────────┼───────────────────────┤
+│1       │john                    │foo bar                │
+│12345678│someone_with_a_long_name│blub blib blab bam boom│
+└────────┴────────────────────────┴───────────────────────┘
 ```
 
 **NOTE:** The spacing between lines is a result of Githubs formatting and should not occure in your terminal.

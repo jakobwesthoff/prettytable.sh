@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 ####
-# Copyright (c) 2016-2021
+# Copyright (c) 2016-2025
 #   Jakob Westhoff <jakob@westhoffswelt.de>
 #
 # Redistribution and use in source and binary forms, with or without
@@ -81,34 +81,34 @@ function prettytable() {
     local cols="${1}"
     local color="${2:-none}"
     local input="$(cat -)"
-    local header="$(echo -e "${input}"|head -n1)"
-    local body="$(echo -e "${input}"|tail -n+2)"
+    local header="$(head -n1 <<<${input})"
+    local body="$(tail -n+2 <<<${input})"
     {
         # Top border
-        echo -n "${_prettytable_char_top_left}"
+        printf "${_prettytable_char_top_left}"
         for i in $(seq 2 ${cols}); do
-            echo -ne "\t${_prettytable_char_vertical_horizontal_top}"
+            printf "\t%s" "${_prettytable_char_vertical_horizontal_top}"
         done
-        echo -e "\t${_prettytable_char_top_right}"
+        printf "\t%s\n" "${_prettytable_char_top_right}"
 
-        echo -e "${header}" | _prettytable_prettify_lines
+        printf "%s\n" "${header}" | _prettytable_prettify_lines
 
         # Header/Body delimiter
-        echo -n "${_prettytable_char_vertical_horizontal_left}"
+        printf "${_prettytable_char_vertical_horizontal_left}"
         for i in $(seq 2 ${cols}); do
-            echo -ne "\t${_prettytable_char_vertical_horizontal}"
+            printf "\t%s" "${_prettytable_char_vertical_horizontal}"
         done
-        echo -e "\t${_prettytable_char_vertical_horizontal_right}"
+        printf "\t%s\n" "${_prettytable_char_vertical_horizontal_right}"
 
-        echo -e "${body}" | _prettytable_prettify_lines
+        printf "%s\n" "${body}" | _prettytable_prettify_lines
 
         # Bottom border
-        echo -n "${_prettytable_char_bottom_left}"
+        printf "${_prettytable_char_bottom_left}"
         for i in $(seq 2 ${cols}); do
-            echo -ne "\t${_prettytable_char_vertical_horizontal_bottom}"
+            printf "\t%s" "${_prettytable_char_vertical_horizontal_bottom}"
         done
-        echo -e "\t${_prettytable_char_bottom_right}"
-    } | column -t -s $'\t' | _prettytable_fix_border_lines | _prettytable_colorize_lines "${color}" "2"
+        printf "\t%s\n" "${_prettytable_char_bottom_right}"
+    } | column -o '' -t -s $'\t' | _prettytable_fix_border_lines | _prettytable_colorize_lines "${color}" "2"
 }
 
 if [ "$0" = "$BASH_SOURCE" ]; then
